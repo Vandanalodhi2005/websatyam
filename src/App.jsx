@@ -4,7 +4,7 @@ import Home from './components/home/Home';
 import Contact from './components/contact/Contact';
 import Header from './components/header/Header';
 import OurService from './components/ourService/OurService';
-import Footer from './components/footer/footer';
+import Footer from './components/footer/Footer';
 import Rettier from './components/renttier/Rettier';
 import AboutMain from './components/aboutUs/AboutMain';
 import InvestorMain from './components/investor/InvestorMain';
