@@ -1,14 +1,24 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [contactClicked, setContactClicked] = useState(false);
+  const [activeNav, setActiveNav] = useState('');
+  const location = useLocation();
 
-  const handleContactClick = () => {
-    setContactClicked(true);
-    setTimeout(() => setContactClicked(false), 500); // Reset after animation
-  };
+  // Set active navigation based on current route
+  React.useEffect(() => {
+    setActiveNav(location.pathname);
+  }, [location.pathname]);
+
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about-us' },
+    { name: 'Our Services', path: '/our-services' },
+    { name: 'MAVHR LLC', path: '/mavhr-llc' },
+    { name: 'Investor ROI', path: '/investor-roi' },
+    { name: 'FAQs', path: '/faqs' },
+  ];
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
@@ -52,21 +62,19 @@ function Header() {
           } absolute lg:relative lg:flex top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none z-10`}
         >
           <ul className="lg:flex lg:items-center lg:space-x-8 p-4 lg:p-0">
-            {['Home', 'About Us', 'Our Services', 'MAVHR LLC', 'Investor ROI', 'FAQs'].map(
-              (item, index) => (
-                <li
-                  key={item}
-                  className={`opacity-0 animate-fade-in animation-delay-${index * 100}`}
+            {navItems.map((item, index) => (
+              <li key={item.path}>
+                <Link
+                  to={item.path}
+                  onClick={() => setActiveNav(item.path)}
+                  className={`block text-fuchsia-800 font-bold rounded px-4 py-2 transition duration-300 ${
+    activeNav === item.path ? 'bg-green-500 text-white' : 'hover:bg-navy-800 hover:text-indigo-700'
+  }`}
                 >
-                  <Link
-                    to={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="block text-fuchsia-800 hover:text-green-500 font-bold hover:bg-navy-800 rounded px-4 py-2 transition duration-300"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              )
-            )}
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
@@ -74,12 +82,9 @@ function Header() {
         <div className="hidden lg:block">
           <Link
             to="/contact"
-            onClick={handleContactClick}
-            className={`bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white py-2 px-6 rounded shadow-lg hover:shadow-2xl transform hover:scale-110 transition duration-500 ease-in-out ${
-              contactClicked ? 'px-8 py-4' : ''
-            }`}
+            className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white py-2 px-6 rounded shadow-lg hover:shadow-2xl transform hover:scale-110 transition duration-500 ease-in-out"
           >
-            Contact Us change
+            Contact Us
           </Link>
         </div>
       </div>
@@ -89,10 +94,7 @@ function Header() {
         <div className="block lg:hidden p-4">
           <Link
             to="/contact"
-            onClick={handleContactClick}
-            className={`block bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-fuchsia-800 text-center py-2 rounded shadow-lg hover:shadow-2xl transform hover:scale-110 transition duration-500 ease-in-out ${
-              contactClicked ? 'px-8 py-4' : ''
-            }`}
+            className="block bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-fuchsia-800 text-center py-2 rounded shadow-lg hover:shadow-2xl transform hover:scale-110 transition duration-500 ease-in-out"
           >
             Contact Us
           </Link>

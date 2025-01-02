@@ -37,7 +37,7 @@ function AboutUs() {
 
         {/* Our Team Section */}
         <div className="mt-20 text-center">
-          <h2 className="text-5xl font-semibold text-fuchsia-900 mb-6">
+          <h2 className="text-5xl font-extrabold text-fuchsia-900 mb-6">
             MEET OUR TEAM
           </h2>
           <p className="max-w-3xl mx-auto mb-12 text-gray-600">

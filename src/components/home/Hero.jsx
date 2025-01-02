@@ -1,127 +1,192 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-function HeaderR() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-    propertyType: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you for contacting us!");
-  };
+function Hero() {
+  const [isFormVisible, setIsFormVisible] = useState(true);
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center pt-20 px-4">
-      {/* Form Container */}
-      <div className="bg-white/90 backdrop-blur-md shadow-xl rounded-lg p-8 w-full max-w-xl">
-        <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-6">
-          Contact Us
-        </h2>
-        <p className="text-gray-600 text-center mb-8">
-          Partner with us for an unparalleled property management service in
-          Dubai and experience the peace of mind that comes with knowing your
-          investment is in capable hands. Contact us today to learn more about
-          how we can help you unlock the full potential of your property.
-        </p>
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Name Field */}
-          <div>
-            <label htmlFor="name" className="block text-gray-700 font-medium">
-              Your Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:ring focus:ring-purple-300 focus:outline-none"
-              placeholder="Enter your name"
-              required
-            />
-          </div>
+    <div
+      className="relative bg-cover bg-center h-screen my-6 bg-fixed" 
+      style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZHViYWl8ZW58MHx8MHx8fDA%3D')",
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-          {/* Email Field */}
-          <div>
-            <label htmlFor="email" className="block text-gray-700 font-medium">
-              Email Address
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:ring focus:ring-purple-300 focus:outline-none"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
+      {/* Content */}
+      <div className="relative z-10 flex flex-col md:flex-row justify-between items-center h-full text-white px-6">
+        {/* Left Section: Hero Text */}
+        <div className="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center py-8 pl-10">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            Airbnb Management in Dubai
+          </h1>
+          <p className="text-lg md:text-xl mb-6">
+            Simplify property management and maximize your rental income. Let
+            us handle your Airbnb property in Dubai.
+          </p>
+        </div>
 
-          {/* Select Field */}
-          <div>
-            <label
-              htmlFor="propertyType"
-              className="block text-gray-700 font-medium"
+        {/* Right Section: Contact Form */}
+        {isFormVisible && (
+          <div className="relative w-full md:w-1/3 bg-white bg-opacity-90 text-black p-8 rounded-lg shadow-lg overflow-auto h-full mx-auto my-6 py-3 ">
+            {/* Cross Button */}
+            <button
+              className="absolute top-2 right-2 text-gray-700 hover:text-red-500 text-xl font-bold"
+              onClick={() => setIsFormVisible(false)}
             >
-              Property Type
-            </label>
-            <select
-              id="propertyType"
-              name="propertyType"
-              value={formData.propertyType}
-              onChange={handleChange}
-              className="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:ring focus:ring-purple-300 focus:outline-none"
-              required
-            >
-              <option value="">Select your property type</option>
-              <option value="apartment">Apartment</option>
-              <option value="villa">Villa</option>
-              <option value="townhouse">Townhouse</option>
-              <option value="commercial">Commercial</option>
-            </select>
-          </div>
+              ✕
+            </button>
 
-          {/* Message Field */}
-          <div>
-            <label
-              htmlFor="message"
-              className="block text-gray-700 font-medium"
-            >
-              Your Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:ring focus:ring-purple-300 focus:outline-none"
-              placeholder="Enter your message"
-              rows="5"
-              required
-            ></textarea>
-          </div>
+            <h2 className="text-2xl font-bold mb-4 text-center">
+              Manage My Property
+            </h2>
+            <form>
+              {/* Type of Property */}
+              <div className="mb-4">
+                <label
+                  htmlFor="propertyType"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Type of Property
+                </label>
+                <input
+                  type="text"
+                  id="propertyType"
+                  placeholder="Enter property type"
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
 
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white font-semibold py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-500 ease-in-out"
-          >
-            Send Message
-          </button>
-        </form>
+              {/* Number of Bedrooms */}
+              <div className="mb-4">
+                <label
+                  htmlFor="bedrooms"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Number of Bedrooms
+                </label>
+                <input
+                  type="number"
+                  id="bedrooms"
+                  placeholder="Enter number of bedrooms"
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
+
+              {/* Select City */}
+              <div className="mb-4">
+                <label
+                  htmlFor="city"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Select City
+                </label>
+                <input
+                  type="text"
+                  id="city"
+                  placeholder="Enter city"
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
+
+              {/* Location of Property */}
+              <div className="mb-4">
+                <label
+                  htmlFor="location"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Location of Property
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  placeholder="Enter property location"
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
+
+              {/* Name */}
+              <div className="mb-4">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your name"
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
+
+              {/* Email */}
+              <div className="mb-4">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                />
+              </div>
+
+              {/* Phone */}
+              <div className="mb-4">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Phone Number
+                </label>
+                <div className="flex">
+                  <span className="inline-flex items-center px-3 text-sm text-gray-700 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md">
+                    +971
+                  </span>
+                  <input
+                    type="text"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    className="flex-1 block w-full p-2 border border-gray-300 rounded-r-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                  />
+                </div>
+              </div>
+
+              {/* Tell us more */}
+              <div className="mb-4">
+                <label
+                  htmlFor="details"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Tell us more about your property (optional)
+                </label>
+                <textarea
+                  id="details"
+                  rows="4"
+                  placeholder="Add additional details here"
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                ></textarea>
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="w-full bg-indigo-600 text-white p-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              >
+                LIST YOUR PROPERTY NOW
+              </button>
+            </form>
+          </div>
+        )}
       </div>
     </div>
   );
 }
 
-export default HeaderR;
+export default Hero;
