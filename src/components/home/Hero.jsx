@@ -17,9 +17,12 @@ function Hero() {
       <div className="relative z-10 flex flex-col md:flex-row justify-between items-center h-full text-white px-6">
         {/* Left Section: Hero Text */}
         <div className="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center py-8 pl-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Airbnb Management in Dubai
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Maditah Alzuhoor Vacation Home Rental LLC
           </h1>
+          <h2 className="text-2xl md:text-4xl font-bold mb-4">
+            Airbnb Management in Dubai
+          </h2>
           <p className="text-lg md:text-xl mb-6">
             Simplify property management and maximize your rental income. Let
             us handle your Airbnb property in Dubai.
@@ -28,10 +31,13 @@ function Hero() {
 
         {/* Right Section: Contact Form */}
         {isFormVisible && (
-          <div className="relative w-full md:w-1/3 bg-white bg-opacity-90 text-black p-8 rounded-lg shadow-lg overflow-auto h-full mx-auto my-6 py-3 ">
-            {/* Cross Button */}
+          <div 
+            className="fixed top-20 right-10 w-full md:w-1/3 bg-slate-800 bg-opacity-45 text-gray-100 p-8 rounded-lg shadow-lg overflow-y-auto max-h-[70vh]"
+            style={{ zIndex: 50 }}
+          >
+            {/* Close Button */}
             <button
-              className="absolute top-2 right-2 text-gray-700 hover:text-red-500 text-xl font-bold"
+              className="absolute top-2 right-2 text-gray-50 hover:text-red-500 text-xl font-bold"
               onClick={() => setIsFormVisible(false)}
             >
               ✕
@@ -43,10 +49,7 @@ function Hero() {
             <form>
               {/* Type of Property */}
               <div className="mb-4">
-                <label
-                  htmlFor="propertyType"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="propertyType" className="block text-sm font-medium text-gray-100">
                   Type of Property
                 </label>
                 <input
@@ -59,10 +62,7 @@ function Hero() {
 
               {/* Number of Bedrooms */}
               <div className="mb-4">
-                <label
-                  htmlFor="bedrooms"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="bedrooms" className="block text-sm font-medium text-gray-100">
                   Number of Bedrooms
                 </label>
                 <input
@@ -75,10 +75,7 @@ function Hero() {
 
               {/* Select City */}
               <div className="mb-4">
-                <label
-                  htmlFor="city"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="city" className="block text-sm font-medium text-gray-100">
                   Select City
                 </label>
                 <input
@@ -91,10 +88,7 @@ function Hero() {
 
               {/* Location of Property */}
               <div className="mb-4">
-                <label
-                  htmlFor="location"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="location" className="block text-sm font-medium  text-gray-100">
                   Location of Property
                 </label>
                 <input
@@ -107,10 +101,7 @@ function Hero() {
 
               {/* Name */}
               <div className="mb-4">
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="name" className="block text-sm font-medium  text-gray-100">
                   Name
                 </label>
                 <input
@@ -123,10 +114,7 @@ function Hero() {
 
               {/* Email */}
               <div className="mb-4">
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="email" className="block text-sm font-medium  text-gray-100">
                   Email
                 </label>
                 <input
@@ -139,14 +127,11 @@ function Hero() {
 
               {/* Phone */}
               <div className="mb-4">
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="phone" className="block text-sm font-medium  text-gray-100">
                   Phone Number
                 </label>
                 <div className="flex">
-                  <span className="inline-flex items-center px-3 text-sm text-gray-700 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md">
+                  <span className="inline-flex items-center px-3 text-sm  text-gray-100 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md">
                     +971
                   </span>
                   <input
@@ -160,10 +145,7 @@ function Hero() {
 
               {/* Tell us more */}
               <div className="mb-4">
-                <label
-                  htmlFor="details"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="details" className="block text-sm font-medium text-gray-100">
                   Tell us more about your property (optional)
                 </label>
                 <textarea
@@ -177,7 +159,7 @@ function Hero() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-indigo-600 text-white p-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="w-full bg-pink-900 text-white p-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 LIST YOUR PROPERTY NOW
               </button>

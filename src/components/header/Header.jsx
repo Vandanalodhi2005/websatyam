@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../image/logo.png'
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,14 +24,14 @@ function Header() {
   return (
     <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        {/* Logo */}
-        <div className="text-2xl font-bold text-navy-800">
-          <Link
-            to="/"
-            className="hover:text-navy-600 transition duration-200"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            Maditah Alzuhoor Vacation Home Rental LLC
+        {/* Logo with Image */}
+        <div>
+          <Link to="/">
+            <img 
+              src={logo} 
+              alt="Maditah Alzuhoor Logo" 
+              className="h-12 w-auto"
+            />
           </Link>
         </div>
 
@@ -68,7 +69,7 @@ function Header() {
                   to={item.path}
                   onClick={() => setActiveNav(item.path)}
                   className={`block text-fuchsia-800 font-bold rounded px-4 py-2 transition duration-300 ${
-    activeNav === item.path ? 'bg-green-500 text-white' : 'hover:bg-navy-800 hover:text-indigo-700'
+    activeNav === item.path ? 'bg-fuchsia-800 text-white' : 'hover:bg-navy-800 hover:text-indigo-700'
   }`}
                 >
                   {item.name}
