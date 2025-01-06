@@ -9,6 +9,7 @@ import Rettier from './components/renttier/Rettier';
 import AboutMain from './components/aboutUs/AboutMain';
 import InvestorMain from './components/investor/InvestorMain';
 import FAQs from './components/FAQs/FAQs';
+import TopScroll from './components/TopScroll';
 
 
 
@@ -18,6 +19,7 @@ function App() {
     <Router>
       <div>
         <Header />
+        <TopScroll />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='/home' element={<Home/>} />
