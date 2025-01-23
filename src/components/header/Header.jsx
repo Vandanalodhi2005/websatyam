@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../image/logo.png';
+import logo from '../image/logo.png'
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +29,7 @@ function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+      <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50 font-bona">
         <div className="container mx-auto flex items-center justify-between py-4 px-6">
           {/* Logo with Image */}
           <div>

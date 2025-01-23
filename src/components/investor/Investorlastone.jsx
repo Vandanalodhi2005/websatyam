@@ -2,10 +2,10 @@ import React from 'react';
 
 function Investorlastone() {
   return (
-    <div className="bg-gray-100 py-10 px-6">
+    <div className="bg-gray-100 py-10 px-6 font-bona">
       <div className="container mx-auto text-center">
         {/* Header Section */}
-        <h2 className="text-3xl md:text-4xl font-bold text-white bg-fuchsia-800 py-3 mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-800 shadow-slate-400 py-3 mb-6 font-vidaloka">
           Dubai's Short-Term Rental Market Statistics
         </h2>
 

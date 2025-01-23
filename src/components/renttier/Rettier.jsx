@@ -2,11 +2,11 @@ import React from 'react';
 
 function Rettier() {
   return (
-    <div className="bg-gray-100 py-12 px-6">
+    <div className="bg-gray-100 py-12 px-6 font-bona">
       <div className="container mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12 my-6">
-          <h1 className="text-4xl font-bold text-white bg-slate-900 py-3 mb-4">WHY RENTTIERS</h1>
+          <h1 className="text-4xl font-bold text-white bg-slate-900 py-3 mb-4 font-vidaloka">WHY RENTTIERS</h1>
           <p className="text-xxl text-gray-700 px-20 py-100 ">
             Partner with us for an unparalleled property management service in Dubai and experience the peace of mind that comes with knowing your investment is in capable hands. Contact us today to learn more about how we can help you unlock the full potential of your property.
           </p>
@@ -57,8 +57,8 @@ function Rettier() {
               className="bg-white shadow-xl hover:shadow-2xl p-6 rounded-lg text-center transform transition-all duration-700 ease-in-out animate-fade-in"
               style={{ animationDelay: `${index * 300}ms` }}
             >
-              <div className="text-4xl mb-4 text-purple-600">{card.icon}</div>
-              <h3 className="text-xl font-semibold text-purple-800 mb-2">{card.title}</h3>
+              <div className="text-4xl mb-4 text-purple-600 ">{card.icon}</div>
+              <h3 className="text-2xl font-semibold text-purple-800 mb-2 font-vidaloka">{card.title}</h3>
               <p className="text-gray-700">{card.description}</p>
             </div>
           ))}

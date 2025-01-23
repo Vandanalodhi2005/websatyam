@@ -5,45 +5,46 @@ function Hero() {
 
   return (
     <div
-      className="relative bg-cover bg-center h-screen my-6 bg-fixed" 
+      className="relative bg-cover bg-center min-h-screen py-6 bg-fixed pt-20 md:pt-0"
       style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZHViYWl8ZW58MHx8MHx8fDA%3D')",
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZHViYWl8ZW58MHx8MHx8fDA%3D')",
       }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col md:flex-row justify-between items-center h-full text-white px-6">
+      <div className="relative z-10 flex flex-col md:flex-row justify-between items-center min-h-screen text-white px-4 md:px-6">
         {/* Left Section: Hero Text */}
-        <div className="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center py-8 pl-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center py-6 md:py-8 lg:pl-10">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 font-vidaloka">
             Maditah Alzuhoor Vacation Home Rental LLC
           </h1>
-          <h2 className="text-2xl md:text-4xl font-bold mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-4 font-bona">
             Airbnb Management in Dubai
           </h2>
-          <p className="text-lg md:text-xl mb-6">
-            Simplify property management and maximize your rental income. Let
-            us handle your Airbnb property in Dubai.
+          <p className="text-sm sm:text-lg md:text-xl mb-6 max-w-[90%] mx-auto md:mx-0 font-bona">
+            Simplify property management and maximize your rental income. Let us
+            handle your Airbnb property in Dubai.
           </p>
         </div>
 
         {/* Right Section: Contact Form */}
         {isFormVisible && (
-          <div 
-            className="fixed top-20 right-10 w-full md:w-1/3 bg-slate-800 bg-opacity-45 text-gray-100 p-8 rounded-lg shadow-lg overflow-y-auto max-h-[70vh]"
+          <div
+            className="fixed top-28 sm:top-20 right-4 sm:right-10 w-[95%] sm:w-4/5 md:w-1/3 bg-slate-800 bg-opacity-50 text-gray-100 p-6 sm:p-8 rounded-lg shadow-lg overflow-y-auto max-h-[70vh] font-bona"
             style={{ zIndex: 50 }}
           >
             {/* Close Button */}
             <button
-              className="absolute top-2 right-2 text-gray-50 hover:text-red-500 text-xl font-bold"
+              className="absolute top-2 right-2 text-gray-50 hover:text-red-500 text-lg sm:text-xl font-bold"
               onClick={() => setIsFormVisible(false)}
             >
               ✕
             </button>
 
-            <h2 className="text-2xl font-bold mb-4 text-center">
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 text-center">
               Manage My Property
             </h2>
             <form>
@@ -88,7 +89,7 @@ function Hero() {
 
               {/* Location of Property */}
               <div className="mb-4">
-                <label htmlFor="location" className="block text-sm font-medium  text-gray-100">
+                <label htmlFor="location" className="block text-sm font-medium text-gray-100">
                   Location of Property
                 </label>
                 <input
@@ -101,7 +102,7 @@ function Hero() {
 
               {/* Name */}
               <div className="mb-4">
-                <label htmlFor="name" className="block text-sm font-medium  text-gray-100">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-100">
                   Name
                 </label>
                 <input
@@ -114,7 +115,7 @@ function Hero() {
 
               {/* Email */}
               <div className="mb-4">
-                <label htmlFor="email" className="block text-sm font-medium  text-gray-100">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-100">
                   Email
                 </label>
                 <input
@@ -127,11 +128,11 @@ function Hero() {
 
               {/* Phone */}
               <div className="mb-4">
-                <label htmlFor="phone" className="block text-sm font-medium  text-gray-100">
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-100">
                   Phone Number
                 </label>
                 <div className="flex">
-                  <span className="inline-flex items-center px-3 text-sm  text-gray-100 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md">
+                  <span className="inline-flex items-center px-3 text-sm text-gray-100 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md">
                     +971
                   </span>
                   <input
@@ -172,3 +173,4 @@ function Hero() {
 }
 
 export default Hero;
+ 

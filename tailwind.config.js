@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'vidaloka': ["Vidaloka"],
+        'bona': ["bona nova sC"]
+      },
+     
+    },
   },
   plugins: [],
 }

@@ -43,9 +43,9 @@ function FAQs() {
   ];
   // bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 py-10 px-6
   return (
-    <div className="bg-white py-10 px-6 my-7">
+    <div className="bg-white py-10 px-6 my-7 font-bona">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-3xl font-bold text-center text-gray-100 py-3 bg-fuchsia-900 mb-8">Frequently Asked Questions</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-100 py-3 bg-slate-900 mb-8 font-vidaloka">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div

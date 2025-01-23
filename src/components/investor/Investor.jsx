@@ -2,11 +2,11 @@ import React from 'react';
 
 function Investor() {
   return (
-    <div className="bg-gray-100 py-10 px-6 my-10">
+    <div className="bg-gray-100 py-10 px-6 my-10 font-bona">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Text Content */}
         <div>
-          <h1 className="text-3xl md:text-4xl font-extrabold text-fuchsia-900 mb-6">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-fuchsia-900 mb-6 font-vidaloka">
             Why should you choose short-term rentals in Dubai?
           </h1>
           <p className="text-gray-600 mb-4">

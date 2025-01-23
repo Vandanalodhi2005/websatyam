@@ -2,11 +2,11 @@ import React from 'react';
 
 function OurService() {
   return (
-    <div className="bg-gray-100 py-10 px-6 my-6">
+    <div className="bg-gray-100 py-10 px-6 my-6 font-bona">
       <div className="container mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white bg-slate-900 py-3">
+          <h1 className="text-4xl md:text-5xl font-bold text-white bg-slate-900 py-3 font-vidaloka">
             Our Services
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mt-4">
@@ -21,11 +21,11 @@ function OurService() {
             alt="About Our Services"
             className="rounded-lg shadow-lg w-full md:w-1/2"
           />
-          <div className="md:w-1/2 text-center md:text-left">
-            <h2 className="text-4xl font-bold text-black mb-4 text-center">
+          <div className="md:w-1/2 text-center md:text-left ">
+            <h2 className="text-4xl font-bold text-pink-950 mb-4 text-center font-vidaloka">
               WHY CHOOSE US?
             </h2>
-            <p className="text-gray-800 shadow-2xl">
+            <p className="text-gray-800 text-xl px-5">
               At Elite Way, we specialize in maximizing property value and streamlining the rental process. From expert marketing to seamless guest experiences, we take care of it all.
             </p>
           </div>
@@ -69,7 +69,7 @@ function OurService() {
               <div className="text-4xl mb-4">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-semibold text-black mb-2">
+              <h3 className="text-2xl font-vidaloka font-semibold text-black mb-2">
                 {service.title}
               </h3>
               <p className="text-gray-700">
