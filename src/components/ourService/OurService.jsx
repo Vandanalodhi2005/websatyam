@@ -6,7 +6,7 @@ function OurService() {
       <div className="container mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white bg-slate-900 py-3 font-vidaloka">
+          <h1 className="text-4xl md:text-5xl font-bold text-yellow-700  py-3 font-vidaloka">
             Our Services
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mt-4">
@@ -22,7 +22,7 @@ function OurService() {
             className="rounded-lg shadow-lg w-full md:w-1/2"
           />
           <div className="md:w-1/2 text-center md:text-left ">
-            <h2 className="text-4xl font-bold text-pink-950 mb-4 text-center font-vidaloka">
+            <h2 className="text-4xl font-bold text-yellow-700 mb-4 text-center font-vidaloka">
               WHY CHOOSE US?
             </h2>
             <p className="text-gray-800 text-xl px-5">
@@ -69,7 +69,7 @@ function OurService() {
               <div className="text-4xl mb-4">
                 {service.icon}
               </div>
-              <h3 className="text-2xl font-vidaloka font-semibold text-black mb-2">
+              <h3 className="text-2xl font-vidaloka font-semibold text-yellow-700 mb-2">
                 {service.title}
               </h3>
               <p className="text-gray-700">

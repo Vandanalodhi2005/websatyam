@@ -2,10 +2,10 @@ import React from 'react';
 
 function Investorlast() {
   return (
-    <div className="bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 py-12 px-8 font-bona">
+    <div className="bg-gray-300  py-12 px-8 font-bona">
       <div className="container mx-auto text-center">
         {/* Header Section */}
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6 font-vidaloka">
+        <h2 className="text-3xl md:text-4xl font-bold text-yellow-800 mb-6 font-vidaloka">
           With Renttiers, short-term rentals are not only profitable
           
            but also <br /> simple and stress-free

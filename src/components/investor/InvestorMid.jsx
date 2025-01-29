@@ -4,7 +4,7 @@ function InvestorMid() {
   return (
     <div className="bg-gray-50 py-10 px-6 font-bona">
       <div className="container mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-10 font-vidaloka">
+        <h1 className="text-3xl md:text-5xl font-bold text-yellow-700 text-center mb-10 font-vidaloka">
           Your Benefits of Short-Term Rentals in Dubai
         </h1>
 
@@ -14,7 +14,7 @@ function InvestorMid() {
             <div className="w-16 h-16 bg-blue-500 text-white flex items-center justify-center rounded-full mb-4">
               <span className="text-2xl">📅</span>
             </div>
-            <h2 className="text-xl font-bold text-gray-800 mb-4 font-vidaloka">Flexibility</h2>
+            <h2 className="text-xl font-bold text-yellow-700 mb-4 font-vidaloka">Flexibility</h2>
             <p className="text-gray-600">
               Owners have full control over their property’s availability and can adjust rental periods to suit their needs.
             </p>
@@ -25,7 +25,7 @@ function InvestorMid() {
             <div className="w-16 h-16 bg-green-500 text-white flex items-center justify-center rounded-full mb-4">
               <span className="text-2xl">💰</span>
             </div>
-            <h2 className="text-xl font-bold text-gray-800 mb-4 font-vidaloka">Higher Income</h2>
+            <h2 className="text-xl font-bold text-yellow-700 mb-4 font-vidaloka">Higher Income</h2>
             <p className="text-gray-600">
               Short-term rentals typically generate higher returns than long-term leases due to dynamic pricing that can be adjusted based on demand.
             </p>
@@ -36,7 +36,7 @@ function InvestorMid() {
             <div className="w-16 h-16 bg-red-500 text-white flex items-center justify-center rounded-full mb-4">
               <span className="text-2xl">🛡️</span>
             </div>
-            <h2 className="text-xl font-bold text-gray-800 mb-4 font-vidaloka">No Tenant-Related Issues</h2>
+            <h2 className="text-xl font-bold text-yellow-700 mb-4 font-vidaloka">No Tenant-Related Issues</h2>
             <p className="text-gray-600">
               Unlike traditional long-term leasing, short-term rentals eliminate risks such as tenant disputes or uncontrolled state of the apartment. Your property can easily be sold at any time.
             </p>
@@ -47,7 +47,7 @@ function InvestorMid() {
             <div className="w-16 h-16 bg-yellow-500 text-white flex items-center justify-center rounded-full mb-4">
               <span className="text-2xl">⏰</span>
             </div>
-            <h2 className="text-xl font-bold text-gray-800 mb-4 font-vidaloka">On-Time Payments</h2>
+            <h2 className="text-xl font-bold text-yellow-700 mb-4 font-vidaloka">On-Time Payments</h2>
             <p className="text-gray-600">
               We always make payments on time, transparently account for all stays.
             </p>
@@ -58,7 +58,7 @@ function InvestorMid() {
             <div className="w-16 h-16 bg-purple-500 text-white flex items-center justify-center rounded-full mb-4">
               <span className="text-2xl">🔧</span>
             </div>
-            <h2 className="text-xl font-bold text-gray-800 mb-4 font-vidaloka">Regular Property Maintenance</h2>
+            <h2 className="text-xl font-bold text-yellow-700 mb-4 font-vidaloka">Regular Property Maintenance</h2>
             <p className="text-gray-600">
               The property is frequently cleaned and inspected, reducing the risk of damage and keeping it in excellent condition.
             </p>
@@ -69,7 +69,7 @@ function InvestorMid() {
             <div className="w-16 h-16 bg-pink-500 text-white flex items-center justify-center rounded-full mb-4">
               <span className="text-2xl">🏠</span>
             </div>
-            <h2 className="text-xl font-bold text-gray-800 mb-4 font-vidaloka">Owner Stays</h2>
+            <h2 className="text-xl font-bold text-yellow-700 mb-4 font-vidaloka">Owner Stays</h2>
             <p className="text-gray-600">
               Owners can reserve their property for personal stays whenever needed, without having to displace a long-term tenant.
             </p>

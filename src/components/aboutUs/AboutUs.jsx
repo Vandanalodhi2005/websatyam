@@ -12,7 +12,7 @@ function AboutUs() {
         <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
           {/* Left Section: About Details */}
           <div className="md:w-2/3 text-center md:text-left mx-10 py-10">
-            <h1 className="text-5xl font-extrabold mb-6 text-red-950 font-vidaloka">
+            <h1 className="text-5xl font-extrabold mb-6 text-yellow-700 font-vidaloka">
               Jaskaran Singh
             </h1>
             <p className="text-xl mb-6 text-gray-700 leading-relaxed font-bona">
@@ -40,7 +40,7 @@ function AboutUs() {
 
         {/* Our Team Section */}
         <div className="mt-20 text-center">
-          <h2 className="text-5xl font-extrabold  from-blue-500 via-purple-500 to-pink-500 text-fuchsia-900 font-vidaloka mb-6">
+          <h2 className="text-5xl font-extrabold  text-yellow-700 font-vidaloka mb-6">
             MEET OUR TEAM
           </h2>
           <p className="max-w-3xl mx-auto mb-12 text-gray-600 font-bona">
@@ -57,7 +57,7 @@ function AboutUs() {
                 alt="Marta Zalewska"
                 className="w-40 h-40 mx-auto rounded-full mb-4 object-cover shadow-md"
               />
-              <h3 className="text-xl font-semibold text-blue-900 font-bona ">
+              <h3 className="text-xl font-semibold text-yellow-700 font-bona ">
                 Marta Zalewska
               </h3>
               <p className="text-gray-500  font-vidaloka">Managing Partner</p>
@@ -70,7 +70,7 @@ function AboutUs() {
                 alt="Stefan Wieckowski"
                 className="w-40 h-40 mx-auto rounded-full mb-4 object-cover shadow-md"
               />
-              <h3 className="text-xl font-semibold text-blue-900">
+              <h3 className="text-xl font-semibold text-yellow-700">
                 Stefan Wieckowski
               </h3>
               <p className="text-gray-500 font-vidaloka">Business Development Director</p>
@@ -83,7 +83,7 @@ function AboutUs() {
                 alt="Matthew Bondu"
                 className="w-40 h-40 mx-auto rounded-full mb-4 object-cover shadow-md"
               />
-              <h3 className="text-xl font-semibold text-blue-900 font-bona">Matthew Bondu</h3>
+              <h3 className="text-xl font-semibold text-yellow-700 font-bona">Matthew Bondu</h3>
               <p className="text-gray-500 font-vidaloka">Marketing Manager</p>
             </div>
           </div>

@@ -66,8 +66,8 @@ function Header() {
                   <Link
                     to={item.path}
                     onClick={() => handleNavClick(item.path)} // Close menu when clicking a link
-                    className={`block text-fuchsia-800 font-bold rounded px-4 py-2 transition duration-300 ${
-                      activeNav === item.path ? 'bg-fuchsia-800 text-white' : 'hover:bg-navy-800 hover:text-indigo-700'
+                    className={`block text-gray-700 font-bold rounded px-4 py-2 transition duration-300 ${
+                      activeNav === item.path ? 'bg-gradient-to-b from-black via-yellow-600 to-yellow-700 text-white' : 'hover:bg-navy-800 hover:text-yellow-700'
                     }`}
                   >
                     {item.name}
@@ -81,7 +81,7 @@ function Header() {
           <div className="hidden lg:block">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white py-2 px-6 rounded shadow-lg hover:shadow-2xl transform hover:scale-110 transition duration-500 ease-in-out"
+              className="text-2xl bg-gradient-to-b from-black via-yellow-600 to-yellow-700 text-white py-2 px-6 rounded shadow-lg hover:shadow-2xl transform hover:scale-110 transition duration-500 ease-in-out"
             >
               Contact Us
             </Link>

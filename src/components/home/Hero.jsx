@@ -160,7 +160,7 @@ function Hero() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-pink-900 text-white p-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="w-full bg-yellow-800 text-white p-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 LIST YOUR PROPERTY NOW
               </button>
